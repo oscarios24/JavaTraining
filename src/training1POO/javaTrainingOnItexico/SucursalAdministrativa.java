@@ -110,7 +110,7 @@ public class SucursalAdministrativa {
 					//Ya que mi lista contendra datos de muchas claces.
 					if (infoLista instanceof Cajeros){
 						//Cajeros c = listasCajeros.get(i);
-						System.out.println("ID del Cajero>" + infoLista.getId() );
+						System.out.println("ID del Cajero test>" + infoLista.getId() );
 						System.out.println("Nombre del Cajero>" + infoLista.getNombre() );
 						System.out.println("Edad del Cajero>" + infoLista.getId() );
 						System.out.println("+++++++++++++++++");
