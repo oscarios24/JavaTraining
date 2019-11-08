@@ -110,7 +110,7 @@ public class SucursalAdministrativa {
 					//Ya que mi lista contendra datos de muchas claces.
 					if (infoLista instanceof Cajeros){
 						//Cajeros c = listasCajeros.get(i);
-						System.out.println("ID del Cajero test>" + infoLista.getId() );
+						System.out.println("ID del Cajero>" + infoLista.getId() );
 						System.out.println("Nombre del Cajero>" + infoLista.getNombre() );
 						System.out.println("Edad del Cajero>" + infoLista.getId() );
 						System.out.println("+++++++++++++++++");
@@ -131,20 +131,27 @@ public class SucursalAdministrativa {
 		Intendentes intendentes1 = new Intendentes();
 		if (opcionEmpleados.contains("3") ){
 			intendentes1.pedirdatos();
-			listasGenericaDePersonas.add(intendentes1);
-			intendentes1 = new Intendentes();		
+			//listasGenericaDePersonas.add(intendentes1);
+			Person p = (Person)intendentes1;
+			listasGenericaDePersonas.add(p);
+			//intendentes1 = new Intendentes();		
 		}
 		if (opcionEmpleados.contains("4")){
 			//
-			if (listasIntendentes.size() != 0){
+			if (listasGenericaDePersonas.size() != 0){
 				//Clientes c = listasClientes.get(i);
-				for (int i=0; i < listasIntendentes.size() ; i++ ){
-					Intendentes c = listasIntendentes.get(i);
-					System.out.println("ID del Intendente>" + c.getId() );
-					System.out.println("Nombre del Intendente>" + c.getNombre() );
-					System.out.println("Edad del Intendente>" + c.getId() );
-					System.out.println("+++++++++++++++++");
-					System.out.println();
+				for (int i=0; i < listasGenericaDePersonas.size() ; i++ ){
+					Person infoLista = listasGenericaDePersonas.get(i);
+					//Intendentes c = listasIntendentes.get(i);
+					if (infoLista instanceof Intendentes){
+						//Cajeros c = listasCajeros.get(i);
+						System.out.println("ID del Cajero>" + infoLista.getId() );
+						System.out.println("Nombre del Cajero>" + infoLista.getNombre() );
+						System.out.println("Edad del Cajero>" + infoLista.getId() );
+						System.out.println("+++++++++++++++++");
+						System.out.println();
+						
+					}
 				}	
 			}else {
 				System.out.println("No hay Intendentes por mostrar ");
