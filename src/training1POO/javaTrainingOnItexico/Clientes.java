@@ -6,7 +6,7 @@ package training1POO.javaTrainingOnItexico;
 
 
 /**
- * @author QA
+ * @author QA oscar
  *
  */
 public class Clientes extends Person {
